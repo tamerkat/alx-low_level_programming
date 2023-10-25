@@ -8,10 +8,9 @@
 */
 
 int sqoure(int n, int val);
-
 int _sqrt_recursion(int n)
 {
-	sqoure(n, 1);
+	return (sqoure(n, 1));
 }
 
 /**
