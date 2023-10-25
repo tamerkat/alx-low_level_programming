@@ -30,4 +30,8 @@ int sqoure(int n, int val)
 	{
 	return (sqoure(n, val + 1));
 	}
+	else
+	{
+	return (-1);
+	}
 }
