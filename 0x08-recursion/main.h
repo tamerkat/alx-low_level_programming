@@ -3,7 +3,7 @@
 #define MAIN_H
 
 #include <stdio.h>
-
+#include <unistd.h>
 
 void _puts_recursion(char *s);
 
