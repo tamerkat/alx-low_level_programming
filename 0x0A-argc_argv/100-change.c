@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
+
 /**
  * main - Entriy poient
  * @argc: int
@@ -15,21 +15,24 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-	printf("0\n");
+	printf("%d\n", 0);
+	return (1);
 	}
+
 	while (--argc)
 	{
 	for (c = argv[argc]; *c; c++)
 	{
 	if (*c < '0' || *c > '9')
 	{
-	printf("Error\n");
+	printf("Error");
 	return (1);
 	}
-	sum += atoi(argv[argc]);
+	sum = atoi(argv[argc]);
 	}
 	}
+
 	printf("%d\n", sum);
 	return (0);
-}
 
+}
