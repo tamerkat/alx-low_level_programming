@@ -10,29 +10,29 @@
 
 int main(int argc, char *argv[])
 {
-	char *c;
-	int sum;
-
-	if (argc == 1)
+	if (argc == 2)
 	{
-	printf("%d\n", 0);
+	int i, leastcents = 0, money = atoi(argv[i]);
+	int censts[] = {25, 10, 5, 2, 1};
+
+	for (i = 0; i < 5; i++)
+	{
+	if (money > censts[i])
+	{
+	leastcents += money / censts[i];
+	money = money % censts[i];
+	if (money % censts[i] == 0)
+	{
+	break;
+	}
+	}
+	}
+	printf("%d\n", leastcents);
+	}
+	else
+	{
+	printf("Error\n");
 	return (1);
 	}
-
-	while (--argc)
-	{
-	for (c = argv[argc]; *c; c++)
-	{
-	if (*c < '0' || *c > '9')
-	{
-	printf("Error");
-	return (1);
-	}
-	sum = atoi(argv[argc]);
-	}
-	}
-
-	printf("%d\n", sum);
 	return (0);
-
 }
