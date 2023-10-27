@@ -13,18 +13,13 @@ int main(int argc, char *argv[])
 	char *c;
 	int sum = 0;
 
-	if (argc == 1)
-	{
-	printf("0\n");
-	}
 	while (--argc)
 	{
 	for (c = argv[argc]; *c; c++)
 	{
 	if (*c < '0' || *c > '9')
 	{
-	printf("Error\n");
-	return (1);
+	return (printf("Error\n"), 1);
 	}
 	}
 	sum += atoi(argv[argc]);
@@ -32,4 +27,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 	return (0);
 }
-
