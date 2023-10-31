@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *strlen - Entry point for
+ * _strlen - Entry point for
  * @s: pointer
  * Return: Always succees
 */
