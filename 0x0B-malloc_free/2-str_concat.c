@@ -23,7 +23,7 @@ char _strlen(char *s)
 */
 
 char *str_concat(char *s1, char *s2)
-	{
+{
 	int size1, size2;
 	int i = 0;
 	char *c;
@@ -56,4 +56,5 @@ char *str_concat(char *s1, char *s2)
 	c[i] = '\0';
 	return (c);
 	}
-	}
+	return (0);
+}
