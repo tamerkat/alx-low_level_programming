@@ -8,7 +8,7 @@
  * Return: always success
  */
 
-char *memest(char *s, char b, unsigned int n)
+char *_memest(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
 
@@ -34,7 +34,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	c = malloc(sizeof(int) * nmemb);
 	if (c == 0)
 		return (NULL);
-	memest(c, 0, sizeof(int) * nmemb);
+	_memest(c, 0, sizeof(int) * nmemb);
 
 	return (c);
 }
