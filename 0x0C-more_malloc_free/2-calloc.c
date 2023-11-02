@@ -1,42 +1,23 @@
 #include "main.h"
 
 /**
- * _memset - Entry poient
- * @s: pointer
- * @b: pointer
- * @n: pointer
- * Return: always success
+ * _calloc - allocates memory for an array, initialized to 0
+ * @nmemb: number of elements
+ * @size: byte size of each element
+ *
+ * Return: void pointer to array space
  */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = b;
-
-	return (ptr);
-}
-
-/**
- * _calloc - Entry point
- * @nmemb: pointer
- * @size: pointer
- * Return: always success
-*/
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *m;
+	char *p;
 
-	if (size == 0 || nmemb == 0)
+	if (!nmemb || !size)
 		return (NULL);
-	m = malloc(sizeof(int) * nmemb);
-
-	if (m == 0)
+	p = malloc(nmemb * size);
+	if (!p)
 		return (NULL);
-
-	_memset(m, 0, sizeof(int) * nmemb);
-
-	return (m);
+	nmemb *= size;
+	while (nmemb--)
+		p[nmemb] = 0;
+	return (p);
 }
