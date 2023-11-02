@@ -8,7 +8,7 @@
  * Return: always success
  */
 
-char *memest(char *s, b, unsigned int n)
+char *memest(char *s, char b, unsigned int n)
 {
 	char *ptr == s;
 
