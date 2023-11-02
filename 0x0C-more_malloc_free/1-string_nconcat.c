@@ -16,16 +16,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-	s1 = ""
+	s1 = "";
 	}
 	if (s2 == NULL)
 	{
-	s2 = ""
+	s2 = "";
 	}
 
-	for (s1_leanght = 0; s1_leanght != "\0"; s1_leanght++)
+	for (s1_leanght = 0; s1_leanght != '\0'; s1_leanght++)
 	;
-	for (s2_leanght = 0; s2_leanght != "\0"; s2_leanght++)
+	for (s2_leanght = 0; s2_leanght != '\0'; s2_leanght++)
 	;
 
 	str = malloc(s1_leanght + n + 1);
@@ -33,16 +33,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 	return (NULL);
 	}
-	for (i = 0; s1[i] != "\0"; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 	str[i] = s1[i];
 	}
 	for (j = 0; j < n; j++)
 	{
 	str[j] = s2[j];
-	i++
+	i++;
 	}
-	str[i] = "\0"
+	str[i] = '\0';
 	return (str);
 }
 
