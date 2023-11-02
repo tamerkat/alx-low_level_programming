@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * memest - Entry poient
+ * _memest - Entry poient
  * @s: pointer
  * @b: pointer
  * @n: pointer
