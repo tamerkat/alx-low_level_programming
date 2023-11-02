@@ -29,11 +29,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *c;
 
-	if (nmemb == 0 || size == 0)
+	if (size == 0 || nmemb == 0)
 		return (NULL);
 	c = malloc(sizeof(int) * nmemb);
+
 	if (c == 0)
 		return (NULL);
+
 	_memest(c, 0, sizeof(int) * nmemb);
 
 	return (c);
