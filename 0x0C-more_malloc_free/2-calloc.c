@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _memest - Entry poient
+ * _memset - Entry poient
  * @s: pointer
  * @b: pointer
  * @n: pointer
  * Return: always success
  */
 
-char *_memest(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
 
@@ -36,7 +36,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (c == 0)
 		return (NULL);
 
-	_memest(c, 0, sizeof(int) * nmemb);
+	_memset(c, 0, sizeof(int) * nmemb);
 
 	return (c);
 }
