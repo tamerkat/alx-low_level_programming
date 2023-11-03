@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 /**
  * _strlen -Entry point
  * @s:pointer
@@ -10,7 +8,9 @@
 
 int _strlen(char *s)
 {
-	char c;
+	int i;
 
-	c = strlen(s);
+	for (i = 0; s[i] != '\0'; i++)
+	;
+	return (i);
 }
