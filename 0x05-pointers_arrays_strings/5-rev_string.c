@@ -14,5 +14,5 @@ void rev_string(char *s)
 	;
 
 	while (i--)
-		_putchar(s[i / 2]);
+		printf(s[i / 2]);
 }
