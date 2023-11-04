@@ -15,4 +15,5 @@ void puts2(char *str)
 	if (str[i] % 2 == 0)
 	printf("%c", str[i]);
 	}
+	printf("\n");
 }
