@@ -1,0 +1,18 @@
+#include "main.h"
+
+/**
+ * reset_to_98 -Entry point
+ * @str:pointer
+ * Return: alawys succus
+*/
+
+void puts2(char *str)
+{
+    int i;
+
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] % 2 == 0)
+            printf("%c", str[i]);
+    }
+}
