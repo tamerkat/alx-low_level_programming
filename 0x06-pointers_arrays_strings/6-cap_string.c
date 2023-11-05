@@ -13,16 +13,16 @@ char *cap_string(char *str)
 
 	while (*str)
 	{
-	for (i = 0; str[i] != '\0'; i++)
-	{
-	if (str[i] == 32)
-	{
-	j = i + 1;
-	if ((int)str[j] >= 97 && (int)str[j] <= 122)
-	str[j] = (int)str[j] - 32;
-	}
-	}
-	str++;
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			if (str[i] == 32)
+			{
+				j = i + 1;
+				if ((int)s[j] >= 97 && (int)s[j] <= 122)
+					s[j] = (int)s[j] - 32;
+			}
+		}
+		str++;
 	}
 	return (s);
 }
