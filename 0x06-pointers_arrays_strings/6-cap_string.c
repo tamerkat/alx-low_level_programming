@@ -8,17 +8,22 @@
 
 char *cap_string(char *str)
 {
-	int i;
+	int i, j;
+	char *s = str;
 
+	while (*str)
+	{
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((int)str[i] == 32)
-		{
-			int j = i + 1;
-
-			if ((int)str[j] >= 97 && (int)str[j] <= 122)
-				str[j] = (int)str[j] - 32;
-		}
+	if (str[i] == 32)
+	{
+	j = i + 1;
+	if ((int)str[j] >= 97 && (int)str[j] <= 122)
+	str[j] = (int)str[j] - 32;
 	}
-	return (str);
+	}
+	str++;
+	}
+	return (s);
 }
+
