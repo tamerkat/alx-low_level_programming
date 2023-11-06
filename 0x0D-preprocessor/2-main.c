@@ -1,4 +1,4 @@
-#include "object_macro"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -7,5 +7,6 @@
 
 int main(void)
 {
-	printf("%c\n", __FILE__);
+	printf("%s\n", __FILE__);
+	return(0);
 }
