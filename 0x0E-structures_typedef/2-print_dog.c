@@ -4,6 +4,7 @@
 /**
  * print_dog - Entry point
  * @d: pointer
+ * REturn: void
 */
 
 void print_dog(struct dog *d)
