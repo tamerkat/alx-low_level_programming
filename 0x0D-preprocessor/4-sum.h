@@ -1,6 +1,6 @@
-#ifndef FUKER_BITCH_H
-#define FUKER_BITCH_H
+#ifndef SUM_H
+#define SUM_H
 
-#define SUM(x, y) ((X) + (y))
+#define SUM(x, y) ((x) + (y))
 
-#endif /*FUKER_BITCH_H*/
+#endif /*SUM_H*/
