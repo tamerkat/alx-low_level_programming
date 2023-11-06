@@ -2,9 +2,8 @@
 #include "dog.h"
 
 /**
- * print_dog - function
+ * print_dog - Entry point
  * @d: pointer
- * Return: void
 */
 
 void print_dog(struct dog *d)
