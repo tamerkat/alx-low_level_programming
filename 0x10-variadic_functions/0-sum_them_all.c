@@ -1,24 +1,27 @@
-#include "main.h"
+#include "variadic_functions.h"
 
 /**
- * sum_them_all - Entry point
- * @n: counter the argv
- * Return: always succuss
-*/
+ * sum_them_all - sum all params
+ * @n: num of params
+ *
+ * Return: sum
+ */
 
 int sum_them_all(const unsigned int n, ...)
 {
-    int i, sum = 0;
+	va_list params;
+	unsigned int i;
+	int sum = 0;
 
-    if (n == 0)
-        return (0);
+	if (!n)
+		return (0);
 
-    va_list argv;
-    va_start(argv, n);
+	va_start(params, n);
 
-    for (i = 0; i < n; i++)
-        sum += va_arg(argv, int);
+	for (i = 0; i < n; i++)
+		sum += va_arg(params, int);
 
-    va_end(argv);
-    return (sum);
+	va_end(params);
+
+	return (sum);
 }
