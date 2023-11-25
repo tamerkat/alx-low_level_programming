@@ -1,13 +1,13 @@
-#include "lists"
+#include "lists.h"
 
-void _constructor(void) __attribute__ ((constructor));
+void myStartupFun(void) __attribute__ ((constructor));
 
 /**
- * _constructor - Entry point
- *i
- * Return: void
-*/
-void _constructor(void)
+ *myStartupFun - function to print before main function
+ *
+ *Return: Void
+ */
+void myStartupFun(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
