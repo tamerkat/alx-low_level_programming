@@ -10,11 +10,10 @@ void free_list(list_t *head)
 {
 	list_t *node, *next_node;
 
+	node = head;
+
 	if (!head)
 	return;
-	else
-	{
-	node = head;
 
 	while (node)
 	{
@@ -23,5 +22,5 @@ void free_list(list_t *head)
 	free(node);
 	node = next_node;
 	}
-	}
+	return (node);
 }
