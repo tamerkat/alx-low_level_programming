@@ -1,29 +1,39 @@
 #include "main.h"
 
 /**
- * cap_string - Entry point
- * @str: pointer
- * Return: always succuss
-*/
+ * template - check for word separators
+ * @c: character
+ * Return: 1 True 0 False
+ */
 
-char *cap_string(char *str)
+int template(char c)
 {
-	int i, j;
-	char *s = str;
-
-	while (*str)
-	{
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			if (str[i] == 32)
-			{
-				j = i + 1;
-				if ((int)s[j] >= 97 && (int)s[j] <= 122)
-					s[j] = (int)s[j] - 32;
-			}
-		}
-		str++;
-	}
-	return (s);
+	if (c == ',' || c == ';' || c == '.' || c == '!' ||
+		c == '?' || c == '"' || c == '(' || c == ')' ||
+		c == '{' || c == '}' || c == ' ' || c == '\t' || c == '\n')
+		return (1);
+	return (0);
 }
 
+/**
+ * cap_string - capitalize each word
+ * @s: word strring
+ *
+ * Return: string
+ */
+char *cap_string(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		if ((s[i] >= 'a' && s[i] <= 'z') && i == 0)
+			s[i] = s[i] - 'a' + 'A';
+
+		if ((s[i] >= 'a' && s[i] <= 'z') && template(s[i - 1]))
+			s[i] = s[i] - 'a' + 'A';
+		i++;
+	}
+
+	return (s);
+}
