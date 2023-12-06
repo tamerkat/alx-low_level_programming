@@ -1,22 +1,26 @@
 #include "lists.h"
 
 /**
- * pop_listint - Entry point for printing
- * @head: pointer
- * Return: pointer to
-*/
+ * pop_listint - pop list
+ * @head: list
+ *
+ * Return: head's node data
+ */
 
 int pop_listint(listint_t **head)
 {
-	listint_t *node;
-	int n;
+	int data;
+	listint_t *temp;
 
-	if (!head || !*head)
-	return (0);
+	if (!*head)
+		return (0);
 
-	node = (*head)->next;
-	n = (*head)->n
-	free(*head);
-	*head = node
-	return (n);
+	temp = *head;
+
+	data = temp->n;
+
+	*head = temp->next;
+	free(temp);
+
+	return (data);
 }
